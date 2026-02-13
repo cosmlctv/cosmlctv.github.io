@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Papa's Games</title>
+  <title>Jacksmith</title>
 </head>
 <body>
-  <h1>Play Papa's Games</h1>
+  <h1>Play Jacksmith</h1>
 
-  <a href="https://www.flipline.com/games/papaspizzeria/" target="_blank">
-    Play Papa's Pizzeria
-  </a>
-
-  <br><br>
-
-  <a href="https://www.flipline.com/games/papasfreezeria/" target="_blank">
-    Play Papa's Freezeria
-  </a>
+  <iframe 
+    src="https://www.flipline.com/games/jacksmith/"
+    width="1000" 
+    height="700" 
+    frameborder="0">
+  </iframe>
 
 </body>
 </html>

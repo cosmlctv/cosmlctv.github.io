@@ -65,7 +65,7 @@
 
     <div class="game-card">
       <h2>Jacksmith</h2>
-      <button onclick="location.href='games/jacksmith.html'">
+      <button onclick="location.href='jacksmith.html'">
         Play
       </button>
     </div>

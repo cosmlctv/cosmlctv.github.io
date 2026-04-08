@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>🎮 My Game Arcade | Retro & Clicker Fun</title>
+  <title>🎮 My Game Arcade | Tropical Clicker & Retro Games</title>
   <style>
     * {
       box-sizing: border-box;
@@ -192,7 +192,7 @@
   <div class="game-container">
     <!-- ORIGINAL GAME CARDS (preserved) -->
     <div class="game-card">
-      <img src="images/jacksmith.jpg" alt="Jacksmith - forge weapons" onerror="this.src='https://placehold.co/400x200/1f2a40/00f2ff?text=Jacksmith+Logo'">
+      <img src="images/jacksmith.jpg" alt="Jacksmith - forge weapons" onerror="this.src='https://placehold.co/400x200/1f2a40/00f2ff?text=⚒️+Jacksmith'">
       <h3>⚒️ Jacksmith</h3>
       <p>Craft weapons & defeat enemies</p>
       <button onclick="location.href='jacksmith.html'">⚔️ Play Jacksmith</button>
@@ -212,12 +212,12 @@
       <button onclick="location.href='armorgamedefence.html'">🎯 Play Defence</button>
     </div>
 
-    <!-- ✨ NEW BUTTON / NEW GAME CARD: Coconut Ascension Clicker ✨ -->
+    <!-- ✨ COCONUT ASCENSION GAME CARD (logo changed to pure coconut image) ✨ -->
     <div class="game-card">
-      <!-- tropical coconut icon (embedded SVG fallback if image missing) -->
+      <!-- Authentic coconut logo: high-quality coconut icon with palm vibe -->
       <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" 
-           alt="Coconut Clicker Logo" 
-           onerror="this.src='https://placehold.co/400x200/2d5a2f/d4ff7c?text=🥥+Coconut+Clicker'">
+           alt="Coconut Clicker Logo - Tropical Coconut" 
+           onerror="this.src='https://emoji.beecdn.com/emoji/noto-emoji/unicode/15.1/1f965.png'; this.onerror=null; this.src='https://placehold.co/400x200/4a3e2b/f5e2b0?text=🥥+COCONUT'">
       <h3>🌴 Coconut Ascension</h3>
       <p>Click coconuts, unlock magic & ascend!</p>
       <button onclick="window.location.href='https://cosmlctv.github.io/clicker'">
@@ -226,22 +226,13 @@
     </div>
   </div>
 
-  <!-- Demo embed section: original iframes (game1 & 2048) PLUS visual improvement -->
+  <!-- Demo embed section: original iframes (clicker preview & 2048) -->
   <div class="demo-games">
     <div class="demo-title">🎲 LIVE PREVIEWS</div>
     <div class="iframe-wrapper">
-      <!-- Game 1: clicker preview? but originally was 'cosmlctv.github.io/clicker' preview? Actually original HTML had: 
-           <h2>Game 1</h2> then iframe src="cosmlctv.github.io/clicker" (missing https://)
-           We'll fix that so it shows the same clicker game inside an iframe as a preview, but to avoid confusion, we present both: 
-           the button above redirects to full game, and this iframe shows embedded version. BUT cosmlctv.github.io/clicker may not allow iframe embedding (X-Frame-Options). 
-           To respect user experience and not break layout, we provide a working embed of the official game's demo? Since the user only asked to add a button to redirect to that URL,
-           but original HTML already had two iframes (one to clicker (broken) and 2048). I'll keep the first iframe as an interactive demo of the official clicker site using an actual valid URL.
-           However, GitHub pages might block embedding. Better to show a card & link but also embed a safe version? But user explicitly wants "another button to redirect". 
-           I'll ADD the new card (which redirects) AND keep existing iframes but fix the first iframe src to 'https://cosmlctv.github.io/clicker' (full URL) 
-           which may not load due to security policies, but it's original. I'll embed with sandbox to maximize compatibility. Also, I'll add a warning note that clicker works best in new tab.
-      -->
+      <!-- Game 1 preview: Coconut Ascension Clicker (same game as button) -->
       <div class="game-iframe-box">
-        <h3 style="margin-bottom: 12px;">🥥 Coconut Clicker (preview)</h3>
+        <h3 style="margin-bottom: 12px;">🥥 Coconut Ascension (live preview)</h3>
         <iframe 
           src="https://cosmlctv.github.io/clicker" 
           width="100%" 
@@ -250,13 +241,13 @@
           frameborder="0"
           sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals"
           loading="lazy"
-          title="Coconut Ascension Clicker">
+          title="Coconut Ascension Clicker Game">
         </iframe>
-        <p style="font-size: 13px; margin-top: 8px;">✨ Tip: if preview fails, click the <strong>"Play Clicker Game"</strong> button above for full experience!</p>
+        <p style="font-size: 13px; margin-top: 8px;">✨ Click the coconut! If preview doesn't load, click the <strong>"Play Clicker Game"</strong> button above.</p>
       </div>
 
       <div class="game-iframe-box">
-        <h3 style="margin-bottom: 12px;">🧩 2048 - Classic</h3>
+        <h3 style="margin-bottom: 12px;">🧩 2048 - Classic Number Game</h3>
         <iframe 
           src="https://play2048.co/" 
           width="100%" 
@@ -265,41 +256,42 @@
           loading="lazy"
           title="2048 Game">
         </iframe>
-        <p style="font-size: 13px; margin-top: 8px;">Merge numbers, reach 2048!</p>
+        <p style="font-size: 13px; margin-top: 8px;">Merge tiles and reach the legendary 2048!</p>
       </div>
     </div>
   </div>
 
   <footer>
-    🎮 My Game Arcade — more games incoming | Click, craft, defend, ascend! 🌟
+    🎮 My Game Arcade — Click, forge, defend, ascend! | Coconut Ascension: tropical clicker madness 🌊🥥
   </footer>
 
-  <!-- small script to handle fallback for missing images and improve responsiveness -->
   <script>
     (function() {
-      // fix any broken images in game-cards (just user-friendly)
-      const images = document.querySelectorAll('.game-card img');
-      images.forEach(img => {
+      // Ensure any broken images get a proper coconut-fallback for the new card
+      const allImages = document.querySelectorAll('.game-card img');
+      allImages.forEach(img => {
         img.addEventListener('error', function() {
-          if (!this.dataset.fallback) {
-            this.dataset.fallback = 'true';
-            // provide textual fallback
-            this.style.objectFit = 'cover';
-            this.style.background = '#1f2a44';
-            this.style.display = 'flex';
-            this.style.alignItems = 'center';
-            this.style.justifyContent = 'center';
-            this.alt = 'Game icon';
+          if (!this.dataset.fallbackTriggered) {
+            this.dataset.fallbackTriggered = 'true';
+            // For the coconut card specifically, if image fails again we show emoji/text backup
+            const parentCard = this.closest('.game-card');
+            if (parentCard && parentCard.innerText.includes('Coconut Ascension')) {
+              // set a nice data-uri svg coconut
+              this.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%238B5A2B'/%3E%3Ccircle cx='50' cy='55' r='30' fill='%23D2B48C'/%3E%3Cpath d='M50 20 L50 10 M30 25 L22 18 M70 25 L78 18' stroke='%23654321' stroke-width='4' fill='none'/%3E%3Ctext x='50' y='72' font-size='24' text-anchor='middle' fill='%233d2b1a'%3E🥥%3C/text%3E%3C/svg%3E";
+              this.style.background = "#2d2418";
+            } else {
+              this.src = "https://placehold.co/400x200/1f2a40/cccccc?text=🎮";
+            }
           }
         });
       });
 
-      // optional: make the new card button extra robust
+      // Make the coconut button extra clear
       const coconutBtn = document.querySelector('.game-card:last-child button');
       if (coconutBtn) {
         coconutBtn.addEventListener('click', (e) => {
-          // ensure it opens link (already onclick redirect)
-          // no extra conflict
+          // No interference, already using onclick but ensure link opens
+          console.log("Redirecting to Coconut Ascension clicker");
         });
       }
     })();
